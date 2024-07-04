@@ -21,6 +21,8 @@ namespace RentMotorcyclesManagement
         protected override void LoadParameters()
         {
             dtGridScreen.Columns["Status"].Visible = false;
+
+            RefreshDataGridView();
         }
 
         public override void Process()

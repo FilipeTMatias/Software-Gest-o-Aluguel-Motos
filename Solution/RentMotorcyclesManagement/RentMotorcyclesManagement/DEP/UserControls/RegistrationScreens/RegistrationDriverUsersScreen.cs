@@ -63,7 +63,7 @@ namespace RentMotorcyclesManagement
                             {
                                 GeneralDatabaseRoutines.BeginTran(dbConnection);
 
-                                if (GeneralDatabaseRoutines.CreateNewUser(dbConnection, mTxtBoxCNPJ.Text, txtBoxName.Text.ToUpper(), dtPBirthday.Value, txtBoxDriverLicenseNumber.Text,
+                                if (GeneralDatabaseRoutines.CreateNewUser(dbConnection, mTxtBoxCNPJ.Text, txtBoxName.Text, dtPBirthday.Value, txtBoxDriverLicenseNumber.Text,
                                                 cBoxDriverLicenseType.SelectedIndex, txtBoxDriverLicenseImage.Text, txtBoxPassword.Text))
                                 {
                                     GeneralDatabaseRoutines.Commit(dbConnection);

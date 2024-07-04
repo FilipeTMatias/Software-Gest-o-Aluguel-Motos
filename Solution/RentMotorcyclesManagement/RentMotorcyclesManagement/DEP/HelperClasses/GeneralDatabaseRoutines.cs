@@ -275,9 +275,9 @@ namespace RentMotorcyclesManagement
                             ", " + GeneralSystemRoutines.ConvertDateTimeInVarchar(planStartDate) + " " +
                             ", " + GeneralSystemRoutines.ConvertDateTimeInVarchar(endPlanDate) + " " +
                             ", " + GeneralSystemRoutines.ConvertDateTimeInVarchar(expectedReturnDate) + " " +
-                            ", " + GeneralSystemRoutines.ConvertStringInVarchar(planPrice.ToString()) + " " +
-                            ", " + GeneralSystemRoutines.ConvertStringInVarchar(totalTax.ToString()) + " " +
-                            ", " + GeneralSystemRoutines.ConvertStringInVarchar(totalAmount.ToString()) + ") " +
+                            ", " + GeneralSystemRoutines.ReplaceDashInDot(planPrice.ToString()) + " " +
+                            ", " + GeneralSystemRoutines.ReplaceDashInDot(totalTax.ToString()) + " " +
+                            ", " + GeneralSystemRoutines.ReplaceDashInDot(totalAmount.ToString()) + ") " +
                             "RETURNING \"ID\"";
 
             NpgsqlCommand cmd = dbConnection.CreateCommand();

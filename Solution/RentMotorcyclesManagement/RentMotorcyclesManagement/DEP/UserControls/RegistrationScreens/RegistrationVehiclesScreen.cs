@@ -67,7 +67,7 @@ namespace RentMotorcyclesManagement
                         {
                             GeneralDatabaseRoutines.BeginTran(dbConnection);
 
-                            if (GeneralDatabaseRoutines.CreateNewVehicle(dbConnection, Convert.ToInt32(txtBoxID.Text), txtBoxModel.Text.ToUpper(), txtBoxPlate.Text.ToUpper(), Convert.ToInt32(txtBoxYear.Text), Convert.ToInt32(cBoxStatus.SelectedValue)))
+                            if (GeneralDatabaseRoutines.CreateNewVehicle(dbConnection, Convert.ToInt32(txtBoxID.Text), txtBoxModel.Text, txtBoxPlate.Text.ToUpper(), Convert.ToInt32(txtBoxYear.Text), Convert.ToInt32(cBoxStatus.SelectedValue)))
                             {
                                 GeneralDatabaseRoutines.Commit(dbConnection);
 

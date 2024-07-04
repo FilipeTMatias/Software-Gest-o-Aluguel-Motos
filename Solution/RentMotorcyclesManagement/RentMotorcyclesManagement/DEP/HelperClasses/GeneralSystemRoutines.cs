@@ -121,6 +121,11 @@ namespace RentMotorcyclesManagement
             return "\'" + variable + "\'";
         }
 
+        public static string ReplaceDashInDot(string variable)
+        {
+            return ConvertStringInVarchar(variable).Replace(",", ".");
+        }
+
         public static string ConvertDateTimeInVarchar(DateTime variable)
         {
             return ConvertStringInVarchar(variable.ToString("yyyy-MM-dd"));

@@ -23,7 +23,9 @@ namespace RentMotorcyclesManagement
             if (profileType == (int)GeneralSystemRoutines.PROFILE_TYPES.ENTREGADOR)
                 this.mainFooter.SelectActiveButtons(string.IsNullOrEmpty(((List<RegDriversAndPlansPersistence>)dtGridScreen.DataSource).FirstOrDefault().PlanDescription),
                     false, false, false, false);
-            
+            if (profileType == (int)GeneralSystemRoutines.PROFILE_TYPES.ADMIN)
+                this.mainFooter.SelectActiveButtons(false, false, false, false, false);
+
             RefreshDataGridColumns();
         }
 
